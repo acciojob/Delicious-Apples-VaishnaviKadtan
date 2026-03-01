@@ -1,2 +1,177 @@
 /* your code here */
  
+/* Reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+	background: #f4f4f4;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+/* Product Card */
+.product {
+	background: #ffffff;
+	width: 900px;
+	display: flex;
+	border-radius: 15px;
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+}
+
+/* LEFT SIDE (Images) */
+.product__photo {
+	flex: 1;
+	background: linear-gradient(135deg, #7ed957, #5ecf3b);
+	padding: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.photo-container {
+	width: 100%;
+}
+
+.photo-main {
+	position: relative;
+	text-align: center;
+}
+
+.photo-main img {
+	width: 250px;
+	transition: 0.3s ease;
+}
+
+.photo-main img:hover {
+	transform: scale(1.05);
+}
+
+/* Icons */
+.controls {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.controls i {
+	color: white;
+	margin-left: 10px;
+	cursor: pointer;
+	font-size: 18px;
+}
+
+.controls i:hover {
+	color: #222;
+}
+
+/* Thumbnail Album */
+.photo-album {
+	margin-top: 20px;
+}
+
+.photo-album ul {
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	gap: 10px;
+}
+
+.photo-album img {
+	width: 50px;
+	cursor: pointer;
+	background: white;
+	padding: 5px;
+	border-radius: 8px;
+	transition: 0.3s;
+}
+
+.photo-album img:hover {
+	transform: scale(1.1);
+}
+
+/* RIGHT SIDE (Info) */
+.product__info {
+	flex: 1;
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+/* Title */
+.title h1 {
+	font-size: 28px;
+	margin-bottom: 5px;
+}
+
+.title span {
+	color: gray;
+	font-size: 14px;
+}
+
+/* Price */
+.price {
+	font-size: 28px;
+	color: #7ed957;
+	margin: 20px 0;
+	font-weight: bold;
+}
+
+/* Variants */
+.variant h3 {
+	font-size: 14px;
+	color: gray;
+	margin-bottom: 10px;
+}
+
+.variant ul {
+	display: flex;
+	list-style: none;
+	gap: 10px;
+}
+
+.variant img {
+	width: 40px;
+	cursor: pointer;
+	border-radius: 50%;
+	padding: 5px;
+	transition: 0.3s;
+	border: 2px solid transparent;
+}
+
+.variant img:hover {
+	border: 2px solid #7ed957;
+	transform: scale(1.1);
+}
+
+/* Description */
+.description {
+	margin-top: 25px;
+	line-height: 1.6;
+	color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+	.product {
+		flex-direction: column;
+		width: 95%;
+	}
+
+	.product__photo {
+		padding: 20px;
+	}
+
+	.product__info {
+		padding: 20px;
+		text-align: center;
+	}
+} 
